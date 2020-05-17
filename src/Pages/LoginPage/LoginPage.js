@@ -1,10 +1,10 @@
 import React from "react";
-import LoginCard from '../../Components/LoginCard/LoginCard';
+import LoginCard from "../../Components/LoginCard/LoginCard";
 
 const LoginPage = () => {
   return (
     <div className="login-page-container">
-    <LoginCard/>
+      <LoginCard />
     </div>
   );
 };

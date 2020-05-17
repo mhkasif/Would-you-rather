@@ -1,0 +1,34 @@
+.navbar {
+  width: 100vw;
+  height: 15vh;
+  border-bottom: 2px solid $color-heading;
+
+  .links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    a:visited,
+    a {
+      margin: 5px 1rem;
+
+      color: black;
+    }
+    .user {
+      margin-left: 6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 5px;
+
+      .im {
+        margin-left: 1rem;
+        // margin-bottom: 1rem;
+      }
+    }
+  }
+}
+.active {
+  color: $color-heading;
+}

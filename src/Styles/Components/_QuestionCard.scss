@@ -1,0 +1,38 @@
+.question-card {
+  width: 90%;
+  display: grid;
+  grid-template-areas: "heading" "details";
+
+  grid-template-rows: 1.5fr 4fr;
+  height: 14rem;
+  border-radius: 3px;
+  border: 1px solid rgba($color-font, 0.4);
+  margin: 1rem 0;
+  .name {
+    background-color: #f8f8f8;
+    border-bottom: 2px solid rgba(#a8a8a8, 0.5);
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  .details {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 1rem 0;
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: 2px solid rgba(#a8a8a8, 0.5);
+    }
+    .data {
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: space-evenly;
+      justify-content: space-evenly;
+    }
+  }
+}

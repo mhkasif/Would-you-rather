@@ -1,0 +1,34 @@
+.add-question-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .add-question-card {
+    border-radius: 5px;
+    width: 30%;
+    height: 60vh;
+    margin-top: 3rem;
+    box-shadow: 0 4px 8px rgba(#000, 0.2);
+    .heading {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-bottom: 1px solid #a8a8a8;
+      height: 4rem;
+      margin-bottom: 1rem;
+    }
+    h3,
+    p {
+      padding: 0 1rem;
+    }
+    .answer-box {
+      padding: 2rem 1rem;
+    }
+    .submit-button {
+      padding: 0 1rem;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.homepage-container {
+  width: 100vw;
+  //   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .questions-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .questions-card-container {
+    width: 40vw;
+    // height: 55vh;
+    margin: 1rem 0;
+    box-shadow: 0 4px 8px rgba(#000, 0.2);
+    grid-template-rows: 1fr auto;
+
+    .tab-container {
+      border-bottom: 1px solid $color-font;
+      width: 100%;
+      display: flex;
+      padding: 2rem;
+      position: relative;
+      .divider {
+        height: 100%;
+        border: 1px solid $color-font;
+      }
+      .tab {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        color: $color-font;
+        cursor: pointer;
+      }
+      .active {
+        color: green;
+      }
+    }
+  }
+}

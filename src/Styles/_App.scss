@@ -1,4 +1,8 @@
-.app-container{
+.app-container {
   width: 100vw;
-
+  display: flex;
+  justify-content: center;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  position: relative;
 }

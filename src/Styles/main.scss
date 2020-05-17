@@ -1,12 +1,16 @@
-@import './variables';
-@import './App';
-
+@import "./variables";
+@import "./App";
 
 //Pages
-@import './Pages/LoginPage';
-
-
-
+@import "./Pages/LoginPage";
+@import "./Pages/AddQuestion";
+@import "./Pages/HomePage";
+@import "./Pages/LeaderboardPage";
 
 //Components
-@import './Components/LoginCard'
+@import "./Components/LoginCard";
+@import "./Components/ScoreCard";
+@import "./Components/QuestionCard";
+@import "./Components/ResultCard";
+@import "./Components/Navbar";
+@import "./Components/Loader";

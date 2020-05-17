@@ -1,55 +1,33 @@
-import React from "react";
-import { Dropdown } from "semantic-ui-react";
-import  * as DATA from '../../Data/_DATA'
-const friendOptions = [
-  {
-    key: "Jenny Hess",
-    text: "Jenny Hess",
-    value: "Jenny Hess",
-    image: {
-      avatar: true,
-      src: "https://react.semantic-ui.com/images/avatar/small/joe.jpg",
-    },
+import React, { useState } from "react";
+import { Dropdown, Button } from "semantic-ui-react";
+import * as DATA from "../../Data/_DATA";
+import { connect } from "react-redux";
+import { setCurrentUserAction } from "../../Redux/User/UserActions";
+import { Link, withRouter } from "react-router-dom";
+const LoginCard = ({
+  users,
+  setCurrentUserAction,
+  match: {
+    params: { id },
   },
-  {
-    key: "Elliot Fu",
-    text: "Elliot Fu",
-    value: "Elliot Fu",
-    image: {
-      avatar: true,
-      src: "https://react.semantic-ui.com/images/avatar/small/veronika.jpg",
-    },
-  },
-  {
-    key: "Stevie Feliciano",
-    text: "Stevie Feliciano",
-    value: "Stevie Feliciano",
-    image: {
-      avatar: true,
-      src: "https://react.semantic-ui.com/images/avatar/small/veronika.jpg",
-    },
-  },
-  {
-    key: "Christian",
-    text: "Christian",
-    value: "Christian",
-    image: {
-      avatar: true,
-      src: "https://react.semantic-ui.com/images/avatar/small/veronika.jpg",
-    },
-  },
-  {
-    key: "Matt",
-    text: "Matt",
-    value: "Matt",
-    image: {
-      avatar: true,
-      src: "https://react.semantic-ui.com/images/avatar/small/veronika.jpg",
-    },
-  },
-];
+}) => {
+  const [selectedUser, changeUser] = useState(null);
 
-const LoginCard = () => {
+  const options = Object.keys(users).map(function (key) {
+    const { id, name, avatarURL } = users[key];
+    return {
+      key: id,
+      text: name,
+      value: id,
+      image: { avatar: true, src: avatarURL },
+    };
+  });
+  const handleClick = () => {
+    setCurrentUserAction(selectedUser);
+  };
+  const handleChange = (e, { value }) => {
+    changeUser(users[value]);
+  };
   return (
     <div className="login-card">
       <div className="login-card--heading">Welcome to Would You Rather App</div>
@@ -57,16 +35,34 @@ const LoginCard = () => {
         <div className="react-image"></div>
         <h2>Sign In</h2>
       </div>
-      <div className='dropdown'>
+      <div className="dropdown">
         <Dropdown
-          placeholder="Select Friend"
+          onChange={handleChange}
+          placeholder="Login As"
           fluid
           selection
-          options={DATA._getUsers()}
+          options={options}
         />
+      </div>
+      <div className="login-btn">
+        <Button
+          as={Link}
+          to={id ? `/questions/${id}` : "home"}
+          disabled={!selectedUser}
+          onClick={handleClick}
+          fluid
+          color="teal"
+        >
+          Login
+        </Button>
       </div>
     </div>
   );
 };
-
-export default LoginCard;
+const actions = {
+  setCurrentUserAction,
+};
+const mapStateToProps = (state) => ({
+  users: state.users.users,
+});
+export default connect(mapStateToProps, actions)(withRouter(LoginCard));
