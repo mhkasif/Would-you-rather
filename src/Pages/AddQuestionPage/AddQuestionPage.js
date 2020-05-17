@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { addQuestionAction } from "../../Redux/Questions/QuestionsActions";
 import AddQuestionForm from "../../Components/AddQuestionForm/AddQuestionForm";
-import { Link } from "react-router-dom";
+
 const AddQuestionPage = ({ addQuestionAction, currentUser, history }) => {
   const [values, handleValues] = useState({
     optionOneText: "",

@@ -1,5 +1,5 @@
 import { SET_CURRENT_USER, SET_ALL_USERS, REMOVE_CURRENT_USER } from "./UserConstants";
-import * as DATA from "../../Data/_DATA";
+
 const initialState = {
   users: [],
   currentUser: null,

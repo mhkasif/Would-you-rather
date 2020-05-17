@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import QuestionCard from "../../Components/QuestionCard/QuestionCard";
+
 import { connect } from "react-redux";
 import { Image, Button, Form, Radio } from "semantic-ui-react";
 import { saveAnswerAction } from "../../Redux/Questions/QuestionsActions";
-import { Link } from "react-router-dom";
+
 import { useEffect } from "react";
 import Page404 from "../Page404/Page404";
 
@@ -20,7 +20,7 @@ const Question = ({
   const [state, handleState] = useState({});
   useEffect(() => {
     if (!currentUser) history.push(`/login/${question_id}`);
-
+// eslint-disable-next-line
   }, []);
   // const { id, author, timestamp, optionOne, optionTwo } = questions[
   //   question_id

@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Image, Segment, Label, Icon, Divider } from "semantic-ui-react";
+import {  Image, Label, Icon, Divider } from "semantic-ui-react";
 
 const ScoreCard = ({
   user: { name, score, answers, questions, avatarURL },

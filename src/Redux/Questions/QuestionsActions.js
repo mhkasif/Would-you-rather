@@ -1,6 +1,6 @@
 import { FETCH_ALL_QUESTIONS } from "./QuestionsConstants";
 import * as DATA from "../../Data/_DATA";
-import { fetchUsersAction, setCurrentUserAction } from "../User/UserActions";
+import { fetchUsersAction } from "../User/UserActions";
 import { loaderStart, loaderEnd } from "../Loader/loaderAction";
 
 const fetchQuestions = (questions) => {

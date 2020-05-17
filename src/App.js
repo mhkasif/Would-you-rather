@@ -3,7 +3,7 @@ import "./Styles/main.scss";
 import LoginPage from "./Pages/LoginPage/LoginPage";
 import { fetchUsersAction } from "./Redux/User/UserActions";
 import { connect } from "react-redux";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import AddQuestionPage from "./Pages/AddQuestionPage/AddQuestionPage";
 import { fetchQuestionsAction } from "./Redux/Questions/QuestionsActions";
 import HomePage from "./Pages/HomePage/HomePage";

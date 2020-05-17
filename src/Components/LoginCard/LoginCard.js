@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Dropdown, Button } from "semantic-ui-react";
-import * as DATA from "../../Data/_DATA";
+
 import { connect } from "react-redux";
 import { setCurrentUserAction } from "../../Redux/User/UserActions";
 import { Link, withRouter } from "react-router-dom";

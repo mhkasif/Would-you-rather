@@ -1,14 +1,11 @@
-import React, { useState } from "react";
-import QuestionCard from "../../Components/QuestionCard/QuestionCard";
+import React from "react";
+
 import { connect } from "react-redux";
 import {
   Image,
-  Button,
-  Form,
-  Radio,
   Message,
   Progress,
-  Label,
+
 } from "semantic-ui-react";
 import { saveAnswerAction } from "../../Redux/Questions/QuestionsActions";
 
@@ -21,7 +18,7 @@ const ResultCard = ({
     params: { question_id },
   },
 }) => {
-  const { id, author, optionOne, optionTwo } = questions[question_id];
+  const { author, optionOne, optionTwo } = questions[question_id];
 
   return (
     <div style={{ width: "45vw", justifySelf: "center" }}>
