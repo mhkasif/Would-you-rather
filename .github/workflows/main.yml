@@ -22,10 +22,10 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Setup Node.js environment
-      uses: actions/setup-node@v2.1.1
+      uses: actions/setup-node@v1.4.2
     
     - name: installing surge
-      run: npm i -g surge
+      run: npm install --global surge
     
     - name: intalling node modules
       run: npm i
