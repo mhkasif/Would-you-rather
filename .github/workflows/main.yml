@@ -24,6 +24,9 @@ jobs:
     - name: Setup Node.js environment
       uses: actions/setup-node@v2.1.1
     
+    - name: installing surge
+      run: npm i -g surge
+    
     - name: intalling node modules
       run: npm i
      
