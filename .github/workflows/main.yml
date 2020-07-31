@@ -27,20 +27,17 @@ jobs:
     - name: installing surge
       run: npm install --global surge
     
-    - name: GitHub Action for Yarn
-      uses: Borales/actions-yarn@v2.3.0
-      with:
-        # Yarn command
-        cmd: install
+    - name: Installing modules
+      run:  npm i
      
     - name: building react app
-      run: yarn build
+      run: npm run build
       
     - name: installing surge
       run: npm i -g surge
       
     - name: deploying using surge
-      run: surge ./build --token ${{secrets.SURGE_TOKEN}}
+      run: surge ./build http://real-top.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
       
     # Runs a set of commands using the runners shell
     - name: Deployed Successfull
